@@ -26,7 +26,8 @@ extension HomeCameraBrain: HomeCameraBrainProtocol {
     
     func processCleanButtonPressed() {
         guard let viewController = viewController else { return }
-        viewController.showPreview(nil)
+        
+        viewController.removePreview()
     }
     
     func processCapturePhotoButtonPressed() {
@@ -36,7 +37,11 @@ extension HomeCameraBrain: HomeCameraBrainProtocol {
     
     func processPhoto(_ photo: UIImage?) {
         guard let viewController = viewController else { return }
-        viewController.showPreview(photo)
+        
+        if let safePhoto = photo {
+            viewController.showPreview(safePhoto)
+        }
+        
     }
     
 }

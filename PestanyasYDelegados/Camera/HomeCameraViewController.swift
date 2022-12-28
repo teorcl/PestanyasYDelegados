@@ -9,7 +9,8 @@ import UIKit
 
 protocol HomeCameraViewControllerProtocol: AnyObject {
     func launchCamera()
-    func showPreview(_ preview: UIImage?)
+    func showPreview(_ preview: UIImage)
+    func removePreview()
 }
 
 class HomeCameraViewController: UIViewController {
@@ -53,8 +54,12 @@ extension HomeCameraViewController: HomeCameraViewControllerProtocol {
         present(picker, animated: true)
     }
     
-    func showPreview(_ preview: UIImage?) {
+    func showPreview(_ preview: UIImage) {
         previewImageView.image = preview
+    }
+    
+    func removePreview() {
+        previewImageView.image = nil
     }
 }
 
