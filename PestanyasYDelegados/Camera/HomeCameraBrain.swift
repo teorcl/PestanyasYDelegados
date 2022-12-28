@@ -5,14 +5,15 @@
 //  Created by TEO on 27/12/22.
 //
 
-//import Foundation
-import UIKit
+import Foundation
+//import UIKit
 
 protocol HomeCameraBrainProtocol {
     func setViewController (_ viewController: HomeCameraViewControllerProtocol)
     func processCleanButtonPressed()
     func processCapturePhotoButtonPressed()
-    func processPhoto(_ photo: UIImage?)
+    func processPhoto(_ photo: Data?)
+    //func processPhoto(_ photo: UIImage?) -> Con UIKit
 }
 
 class HomeCameraBrain {
@@ -35,7 +36,7 @@ extension HomeCameraBrain: HomeCameraBrainProtocol {
         viewController.launchCamera()
     }
     
-    func processPhoto(_ photo: UIImage?) {
+    func processPhoto(_ photo: Data?) {
         guard let viewController = viewController else { return }
         
         if let safePhoto = photo {

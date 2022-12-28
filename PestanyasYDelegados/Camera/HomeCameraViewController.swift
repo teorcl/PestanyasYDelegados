@@ -9,7 +9,7 @@ import UIKit
 
 protocol HomeCameraViewControllerProtocol: AnyObject {
     func launchCamera()
-    func showPreview(_ preview: UIImage)
+    func showPreview(_ preview: Data)
     func removePreview()
 }
 
@@ -42,7 +42,13 @@ extension HomeCameraViewController: UIImagePickerControllerDelegate, UINavigatio
         
         let image = info[.originalImage] as? UIImage
         
-        brain.processPhoto(image)
+        // Aplicamos la modificación de la orientación de la imagen
+        let verticalImage = image?.fixOrientation()
+        
+        //  Convetir la imagen a datos
+        let imageAsBytes = verticalImage?.pngData()
+        
+        brain.processPhoto(imageAsBytes)
     }
 }
 
@@ -54,8 +60,8 @@ extension HomeCameraViewController: HomeCameraViewControllerProtocol {
         present(picker, animated: true)
     }
     
-    func showPreview(_ preview: UIImage) {
-        previewImageView.image = preview
+    func showPreview(_ preview: Data) {
+        previewImageView.image = UIImage(data: preview)
     }
     
     func removePreview() {
