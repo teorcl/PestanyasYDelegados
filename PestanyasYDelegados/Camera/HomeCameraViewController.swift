@@ -36,6 +36,9 @@ class HomeCameraViewController: UIViewController {
 extension HomeCameraViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
+        // Quitar el picker (UIImagePickerController que se está presentando en launchCamera())
+        picker.dismiss(animated: true)
+        
         let image = info[.originalImage] as? UIImage
         
         brain.processPhoto(image)

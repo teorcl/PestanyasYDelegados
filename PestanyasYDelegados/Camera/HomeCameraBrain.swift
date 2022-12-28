@@ -25,7 +25,8 @@ extension HomeCameraBrain: HomeCameraBrainProtocol {
     }
     
     func processCleanButtonPressed() {
-        
+        guard let viewController = viewController else { return }
+        viewController.showPreview(nil)
     }
     
     func processCapturePhotoButtonPressed() {
