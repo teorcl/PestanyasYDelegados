@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="306-mi-Ypb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="02r-hG-izD">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Camera View Controller-->
+        <!--Cámara-->
         <scene sceneID="aTX-aw-Abf">
             <objects>
                 <viewController id="306-mi-Ypb" customClass="HomeCameraViewController" customModule="PestanyasYDelegados" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Q1-te-1Fd" userLabel="PanelDeBotones">
-                                <rect key="frame" x="10" y="773" width="373" height="35"/>
+                                <rect key="frame" x="10" y="724" width="373" height="35"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Lz-W2-6gd">
                                         <rect key="frame" x="282" y="0.0" width="91" height="35"/>
@@ -58,7 +58,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1a8-mr-tzw">
-                                <rect key="frame" x="10" y="139.66666666666669" width="373" height="613.33333333333326"/>
+                                <rect key="frame" x="10" y="139.66666666666669" width="373" height="564.33333333333326"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="16v-9L-j6C"/>
@@ -76,16 +76,55 @@
                             <constraint firstItem="16v-9L-j6C" firstAttribute="trailing" secondItem="1Q1-te-1Fd" secondAttribute="trailing" constant="10" id="wgP-MK-Evn"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Cámara" image="camera" catalog="system" selectedImage="camera.fill" id="a6A-T4-jiH"/>
                     <connections>
                         <outlet property="previewImageView" destination="1a8-mr-tzw" id="bms-Ac-nCP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4T-rH-w2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="866.41221374045801" y="25.35211267605634"/>
+        </scene>
+        <!--Fecha-->
+        <scene sceneID="j4C-RR-fyK">
+            <objects>
+                <viewController id="UjN-fh-DVl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G5G-fB-VNC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="odS-0G-ykK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Fecha" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="CmS-ol-s9O"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lmo-NV-cTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866" y="744"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="eND-s2-xA3">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="02r-hG-izD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y8Q-I7-V8C">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="306-mi-Ypb" kind="relationship" relationship="viewControllers" id="9B1-N8-3AP"/>
+                        <segue destination="UjN-fh-DVl" kind="relationship" relationship="viewControllers" id="mVI-zv-pkm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WRg-LF-dKd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="-60.305343511450381" y="25.35211267605634"/>
         </scene>
     </scenes>
     <resources>
+        <image name="calendar.circle" catalog="system" width="128" height="123"/>
+        <image name="calendar.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="camera" catalog="system" width="128" height="93"/>
+        <image name="camera.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
