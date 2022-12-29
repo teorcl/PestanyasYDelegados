@@ -15,6 +15,9 @@
 		8430869C295B33CC0028238A /* HomeCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430869B295B33CC0028238A /* HomeCameraViewController.swift */; };
 		8430869F295B41510028238A /* HomeCameraBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8430869E295B41510028238A /* HomeCameraBrain.swift */; };
 		843086A2295CA6930028238A /* UIImage+fixOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843086A1295CA6930028238A /* UIImage+fixOrientation.swift */; };
+		843086A5295CB8C10028238A /* BirthdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843086A4295CB8C10028238A /* BirthdateViewController.swift */; };
+		843086A7295CB8E00028238A /* BirthdateBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843086A6295CB8E00028238A /* BirthdateBrain.swift */; };
+		843086A9295CF3C60028238A /* BirthDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843086A8295CF3C60028238A /* BirthDateFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		8430869B295B33CC0028238A /* HomeCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCameraViewController.swift; sourceTree = "<group>"; };
 		8430869E295B41510028238A /* HomeCameraBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCameraBrain.swift; sourceTree = "<group>"; };
 		843086A1295CA6930028238A /* UIImage+fixOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+fixOrientation.swift"; sourceTree = "<group>"; };
+		843086A4295CB8C10028238A /* BirthdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdateViewController.swift; sourceTree = "<group>"; };
+		843086A6295CB8E00028238A /* BirthdateBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdateBrain.swift; sourceTree = "<group>"; };
+		843086A8295CF3C60028238A /* BirthDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthDateFormatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 		84308686295B317C0028238A /* PestanyasYDelegados */ = {
 			isa = PBXGroup;
 			children = (
+				843086A3295CB87A0028238A /* Birthdate */,
 				843086A0295CA5AF0028238A /* Common */,
 				8430869D295B34170028238A /* Camera */,
 				84308687295B317C0028238A /* AppDelegate.swift */,
@@ -87,6 +94,16 @@
 				843086A1295CA6930028238A /* UIImage+fixOrientation.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		843086A3295CB87A0028238A /* Birthdate */ = {
+			isa = PBXGroup;
+			children = (
+				843086A4295CB8C10028238A /* BirthdateViewController.swift */,
+				843086A6295CB8E00028238A /* BirthdateBrain.swift */,
+				843086A8295CF3C60028238A /* BirthDateFormatter.swift */,
+			);
+			path = Birthdate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,10 +177,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843086A5295CB8C10028238A /* BirthdateViewController.swift in Sources */,
 				84308688295B317C0028238A /* AppDelegate.swift in Sources */,
 				843086A2295CA6930028238A /* UIImage+fixOrientation.swift in Sources */,
 				8430869C295B33CC0028238A /* HomeCameraViewController.swift in Sources */,
 				8430869F295B41510028238A /* HomeCameraBrain.swift in Sources */,
+				843086A7295CB8E00028238A /* BirthdateBrain.swift in Sources */,
+				843086A9295CF3C60028238A /* BirthDateFormatter.swift in Sources */,
 				8430868A295B317C0028238A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

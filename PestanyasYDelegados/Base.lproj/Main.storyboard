@@ -88,14 +88,38 @@
         <!--Fecha-->
         <scene sceneID="j4C-RR-fyK">
             <objects>
-                <viewController id="UjN-fh-DVl" sceneMemberID="viewController">
+                <viewController id="UjN-fh-DVl" customClass="BirthdateViewController" customModule="PestanyasYDelegados" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G5G-fB-VNC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Su fecha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="beD-h6-dd6">
+                                <rect key="frame" x="10" y="406" width="373" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de Cumpleaños" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pej-B6-Rbd">
+                                <rect key="frame" x="10" y="69" width="373" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="odS-0G-ykK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pej-B6-Rbd" firstAttribute="leading" secondItem="odS-0G-ykK" secondAttribute="leading" constant="10" id="4tz-t9-aJp"/>
+                            <constraint firstItem="odS-0G-ykK" firstAttribute="trailing" secondItem="pej-B6-Rbd" secondAttribute="trailing" constant="10" id="8te-MM-fF6"/>
+                            <constraint firstItem="odS-0G-ykK" firstAttribute="trailing" secondItem="beD-h6-dd6" secondAttribute="trailing" constant="10" id="DBl-J4-zxH"/>
+                            <constraint firstItem="beD-h6-dd6" firstAttribute="centerY" secondItem="G5G-fB-VNC" secondAttribute="centerY" id="EP6-z2-bqF"/>
+                            <constraint firstItem="beD-h6-dd6" firstAttribute="leading" secondItem="odS-0G-ykK" secondAttribute="leading" constant="10" id="ozB-ge-fYV"/>
+                            <constraint firstItem="pej-B6-Rbd" firstAttribute="top" secondItem="odS-0G-ykK" secondAttribute="top" constant="10" id="wcz-Se-dJm"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Fecha" image="calendar.circle" catalog="system" selectedImage="calendar.circle.fill" id="CmS-ol-s9O"/>
+                    <connections>
+                        <outlet property="birthdateTextField" destination="beD-h6-dd6" id="mHK-49-sUn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmo-NV-cTV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
